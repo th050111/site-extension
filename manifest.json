@@ -1,0 +1,32 @@
+{
+  "name": "사이트 잠금",
+  "description": "사이트 잠금프로그램.",
+  "version": "1.0.0",
+  "short_name": "사이트 잠금",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+      "debugger",
+      "activeTab",
+      "tabs",
+      "background",
+		"storage"
+  ],
+  "content_scripts": [
+   {
+     "matches": ["https://*.youtube.com/*"],
+     "css": ["style.css"],
+     "js": ["crpto.js","content.js"]
+   }
+ ],
+ "browser_action":
+ {
+ 	"default_popup": "popup.html"
+	},
+ "web_accessible_resources": ["lock.png"],
+  "content_security_policy": "script-src 'self' 'sha256-5As4+3YpY62'; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-4BFUa0FW1kfkUSPd99vK++/6hkZMYVNCMqJCz0XBMXY='; object-src 'self'"
+
+}

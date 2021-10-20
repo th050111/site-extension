@@ -1,0 +1,9 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	height: 300px;
+}
+#input-id-container{
+	display:none;
+}
